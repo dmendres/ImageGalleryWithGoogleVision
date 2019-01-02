@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Gallery</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="imageGallery.css">
+	</head>
+<body>
+	<h1>Photo Gallery with Google Vision</h1>
+	<h2>Using Google Vision </h2>
+
+	
+
+
+	<p class="textP">Google Vision API is able to detect and classify many kinds of objects within images. Check the boxes for features you wish to locate, then click on an image in the Image Gallery. Google Vision will be activated to analyze the image for the features selected. Information will be displayed below. Note: not all of these images have analyzable content.</p>
+	<!-- <button id="filterDialog">Select Google Vision Feature Annotations</button> -->
+	<div id="filters">
+    	<label><input type="checkbox" name="filters" id="ObjectLocalization" checked>Objects</label>
+    	<label><input type="checkbox"  name="filters" id="TextAnnotations">Image Text</label>
+    	<label><input type="checkbox"  name="filters" id="LabelAnnotations">Keywords</label>
+    	<label><input type="checkbox"  name="filters" id="FaceAnnotations">Faces</label>
+    	<label><input type="checkbox"  name="filters" id="LogoAnnotations">Logos</label>
+    	<label><input type="checkbox"  name="filters" id="LandmarkAnnotations">Landmarks</label>
+    	<!-- <label><input type="checkbox"  name="filters" id=""></label> -->
+	</div>
+
+<div id="gvResults" style="display:none">
+	<h3>Google Vision Results</h3>
+	<h4 id="keywordResults">Keyword Results</h4>
+	<h4 id="faceResults">Facial Analysis Results</h4>
+	<h4 id="logoResults">Logo Analysis Results</h4>
+	<h4 id="landmarkResults">Landmark Analysis Results</h4>
+	<h4 id="textResults">Text Results</h4>
+	<h4 id="imageResults">Image Results</h4>
+	<svg width="400" height="400" stroke='black'
+  			xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+	</svg>
+</div>
+
+<h2>Image Gallery</h2>
+
+<!-- David Mack Endres, Bending Ray LLC -->
+<!-- These images are NOT creative commons licensed. Contact dmendres@acm.org for permission to use. -->
+<p>David Mack Endres, Bending Ray LLC</p>
+<button class="GVButton">Error test missing image<img src= "https://www.bendingray.com/wp/wp-content/uploads/2018/11/xyzzy.jpg"></button>
+<button class="GVButton"><img src="https://www.bendingray.com/wp/wp-content/uploads/2018/11/endres_david_20180811_0128-891x1024.jpg"></button>
+<button class="GVButton"><img src="https://www.bendingray.com/wp/wp-content/uploads/2018/11/endres_david_20180812_0289-1024x683.jpg"></button>
+
+<p>Some Text samples</p>
+<button class="GVButton"><img src="https://www.bendingray.com/wp/wp-content/uploads/2018/11/endres_david_20181117_3638.jpg"></button>
+<button class="GVButton"><img src="https://www.bendingray.com/wp/wp-content/uploads/2018/11/endres_david_20181117_3572.jpg"></button>
+<button class="GVButton"><img src="https://www.bendingray.com/wp/wp-content/uploads/2018/11/endres_david_20181117_3679.jpg"></button>
+
+<p>Some Landmark Samples</p>
+
+
+
+
+<p>Some Faces</p>
+<button class="GVButton"><img src="https://www.bendingray.com/wp/wp-content/uploads/2018/11/endres_david_20181111_0388.jpg"></button>
+<button class="GVButton"><img src="https://www.bendingray.com/wp/wp-content/uploads/2018/11/endres_david_20181111_0370.jpg"></button>
+<button class="GVButton"><img src="https://www.bendingray.com/wp/wp-content/uploads/2018/11/endres_david_20181111_0396.jpg"></button>
+
+<button class="GVButton"><img src= "https://www.bendingray.com/wp/wp-content/uploads/2018/11/endres_david_20181102_0173-2.jpg"></button>
+<button class="GVButton"><img src= "https://www.bendingray.com/wp/wp-content/uploads/2018/11/2018-11-06-15-23-45-Rose-Stack-10-ARadius8Smoothing4-2-683x1024.jpg"></button>
+<button class="GVButton"><img src= "https://www.bendingray.com/wp/wp-content/uploads/2018/11/2018-11-06-11-39-05-Dahlia-5-stack-ARadius8Smoothing4-768x512.jpg"></button>
+
+<button class="GVButton"><img src= "https://www.bendingray.com/wp/wp-content/uploads/2018/11/endres_david_20181101_1596-1024x1001.jpg"></button>
+<button class="GVButton"><img src= "https://www.bendingray.com/wp/wp-content/uploads/2018/11/endres_david_20181101_1595-1024x647.jpg"></button>
+<button class="GVButton"><img src= "https://www.bendingray.com/wp/wp-content/uploads/2018/11/endres_david_20181103_0225-768x930.jpg"></button>
+
+<p>Some images from SVRA at COTA</p>
+<button class="GVButton"><img src= "https://www.bendingray.com/wp/wp-content/uploads/2018/11/endres_david_20181103_2645.jpg"></button>
+<button class="GVButton"><img src= "https://www.bendingray.com/wp/wp-content/uploads/2018/11/endres_david_20181103_1688.jpg"></button>
+<button class="GVButton"><img src= "https://www.bendingray.com/wp/wp-content/uploads/2018/11/endres_david_20181103_2939.jpg"></button>
+<button class="GVButton"><img src= "https://www.bendingray.com/wp/wp-content/uploads/2018/11/endres_david_20181103_3023-Pano.jpg"></button>
+<button class="GVButton"><img src= "https://www.bendingray.com/wp/wp-content/uploads/2018/11/endres_david_20181103_2774-244x300.jpg"></button>
+<button class="GVButton"><img src= "https://www.bendingray.com/wp/wp-content/uploads/2018/11/endres_david_20181103_2779-3-300x199.jpg"></button>
+<!-- Massimo Margagnoni -->
+<p>Massimo Margagnoni</p>
+
+<button class="GVButton">
+	<img src= "http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg">
+</button>
+<button class="GVButton">
+	<img src= "http://c2.staticflickr.com/8/7218/7209301894_c99d3a33c2_h.jpg">
+</button>
+<button class="GVButton">
+	<img src= "http://c2.staticflickr.com/8/7231/6947093326_df216540ff_b.jpg">
+</button>
+
+<!-- Giuseppe Milo -->
+<p>Giuseppe Milo</p>
+<button class="GVButton"><img src= "http://c1.staticflickr.com/9/8788/17367410309_78abb9e5b6_b.jpg"></button>
+<button class="GVButton"><img src= "http://c2.staticflickr.com/6/5814/20700286354_762c19bd3b_b.jpg"></button>
+<button class="GVButton"><img src= "http://c2.staticflickr.com/6/5647/21137202535_404bf25729_b.jpg"></button>
+
+<!-- GörlitzPhotography -->
+<p>GörlitzPhotography</p>
+<button class="GVButton"><img src= "http://c2.staticflickr.com/6/5588/14991687545_5c8e1a2e86_b.jpg"></button>
+<button class="GVButton"><img src= "http://c2.staticflickr.com/4/3888/14878097108_5997041006_b.jpg"></button>
+<button class="GVButton"><img src= "http://c2.staticflickr.com/8/7579/15482110477_0b0e9e5421_b.jpg"></button>
+
+
+<!-- All Photos Licensed Under Creative Commons 2.0 -->
+<!-- https://creativecommons.org/licenses/by/2.0/legalcode  -->
+</body>
+<script type="text/javascript" src="../gvInit.js"></script>
+<script type="text/javascript" src="imageGalleryPresentation.js"></script>
+<script type="text/javascript" src="imageGalleryProcessing.js"></script>
+<script type="text/javascript" src="imageGalleryGVBackend.js"></script>
+</html>
